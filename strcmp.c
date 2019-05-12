@@ -1,5 +1,3 @@
-// rebuilding various functions from the string.h library
-
 #include <stdio.h>
 #include <strlen.h>
 
