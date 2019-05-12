@@ -36,7 +36,6 @@ int strcmp(unsigned const char *str1, unsigned const char *str2) // if str1 == s
 
 int main()
 {
-    // testing the functions
     char name1[30], name2[30];
 
     printf("\n Please enter your name: ");
@@ -45,6 +44,7 @@ int main()
     printf("\n Please enter your name: ");
     fgets(name2, sizeof(name2), stdin);
 
+    // testing the functions
     if (strcmp(name1, name2) == 0)
         printf("\n The names are equal! \n");
     else if (strcmp(name1, name2) == -1)
