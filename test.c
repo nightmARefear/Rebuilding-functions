@@ -1,3 +1,4 @@
+/* tests the functions */
 #include <stdio.h>
 #include <strlen.h>
 #include <strcmp.h>
