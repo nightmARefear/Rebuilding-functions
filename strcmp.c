@@ -1,15 +1,7 @@
 // rebuilding various functions from the string.h library
 
 #include <stdio.h>
-
-int strlen(unsigned const char *str)
-{
-    int length = 0;
-
-    while (str[length] != '\0')
-        length++;
-    return length;
-};
+#include <strlen.h>
 
 int strcmp(unsigned const char *str1, unsigned const char *str2) // if str1 == str2 return 0, if str1 < str2 return 1, if str1 > str2 return -1
 {
