@@ -73,14 +73,14 @@ int isprint(int target)
 int toupper(int target)
 {
     if (islower(target))
-        target = target - ('A' - 'a'); // target = target + ('A' - 'a');
+        target = target + ('A' - 'a'); 
     return target;
 }
 
 int tolower(int target)
 {
     if (isupper(target))
-        target = target - ('a' - 'A');
+        target = target + ('a' - 'A');
     return target;
 }
 

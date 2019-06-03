@@ -1,9 +1,16 @@
 /* tests the functions */
 #include <stdio.h>
 #include "string2.h"
+#include "ctype.h"
+
+#ifndef EXIT_SUCCESS
+EXIT_SUCCESS = 0;
+#endif
 
 int main()
 {
+    
+    // test for string2.h library 
     char name1[30], name2[30];
 
     printf("\n Please enter your name: ");
@@ -20,18 +27,29 @@ int main()
     else
         printf("\n The second name is bigger than the first! \n");
 
-	strcpy2(name1, name2);
-	printf("\n name1 = %s \n", name1);
+    strcpy2(name1, name2);
+    printf("\n name1 (name 1 = name2): %s \n", name1);
 
-	char First_Name[30], Last_Name[30];
+    char First_Name[30], Last_Name[30];
 
-	printf("\n Enter your first and last name: \n");
-	scanf("%s %s", First_Name, Last_Name);
+    printf("\n Enter your first and last name: \n");
+    scanf("%s %s", First_Name, Last_Name);
 
-	strcat2(First_Name, Last_Name);
+    strcat2(First_Name, Last_Name);
+    printf("\n Full name: %s \n", First_Name);
+   
+   
 
-	printf("\n Full name: %s \n", First_Name);
+    // test for ctype.h library 
+    char c, d;
+    printf("\n Enter a non-capital and capital letter: \n");
+    scanf("%c%c", &c, &d);
+    c = toupper(c);
+    d = tolower(d);
 
-	system("pause"); // pauses the terminal
-    return 0;
+    printf("\n The entered letter in uppercase form is: %c \n", c);
+    printf("\n The entered letter in lowercase form is: %c \n", d);
+
+    system("pause"); // pauses the terminal
+    return EXIT_SUCCESS;
 }

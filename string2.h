@@ -37,8 +37,8 @@ char *strcpy2(char *target, const char *source)
 	int strlenS = strlen2(source);
 	int i;
 
-	for (i=0; i<sizeT; i++) // initializing the target string to NULL
-			target[i] = NULL;
+	for (i=0; i<sizeT; i++) // initializing the target string to NULL (0)
+			target[i] = 0; // target[i] = NULL;
 
 	if (sizeT >= strlenS)
 	{
