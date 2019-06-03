@@ -83,3 +83,11 @@ int tolower(int target)
         target = target - ('a' - 'A');
     return target;
 }
+
+int isxdigit(int target)
+{
+    if ((target >= 0 && target <= 9) || (target >= 'a' && target <= 'f') || (target >= 'A' && target <= 'f'))
+        return 1;
+    else
+        return 0;
+}
