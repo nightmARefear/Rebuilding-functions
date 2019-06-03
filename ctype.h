@@ -1,4 +1,4 @@
-int isdigit(unsigned const char target)
+int isdigit(int target)
 {
     if (target >= 0 && target <= 9)
         return 1;
@@ -6,7 +6,7 @@ int isdigit(unsigned const char target)
         return 0;
 }
 
-int isalpha(unsigned const char target)
+int isalpha(int target)
 {
     if ((target >= 'a' && target <= 'z') || (target >= 'A' && target <= 'Z'))
         return 1;
@@ -14,7 +14,7 @@ int isalpha(unsigned const char target)
         return 0;
 }
 
-int isalnum(unsigned const char target)
+int isalnum(int target)
 {
     if (isalpha(target) || isdigit(target))
         return 1;
@@ -22,17 +22,33 @@ int isalnum(unsigned const char target)
         return 0;
 }
 
-int islower(unsigned const char target)
+int islower(int target)
 {
     if (target >= 'a' && target <= 'z')
         return 1;
-    else 
-        return 0;    
+    else
+        return 0;
 }
 
-int isupper(unsigned const char target)
+int isupper(int target)
 {
     if (target >= 'A' && target <= 'Z')
+        return 1;
+    else
+        return 0;
+}
+
+int isspace(int target)
+{
+    if (target == ' ')
+        return 1;
+    else
+        return 0;
+}
+
+int ispunct(int target)
+{
+    if ((target >= 32 && target <= 47) || (target >= 48 && target <= 64) || (target >= 91 && target <= 96) || (target >= 123 && target <= 126))
         return 1;
     else 
         return 0;    
