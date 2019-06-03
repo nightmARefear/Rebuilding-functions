@@ -50,6 +50,36 @@ int ispunct(int target)
 {
     if ((target >= 32 && target <= 47) || (target >= 48 && target <= 64) || (target >= 91 && target <= 96) || (target >= 123 && target <= 126))
         return 1;
-    else 
-        return 0;    
+    else
+        return 0;
+}
+
+int iscntrl(int target)
+{
+    if (target >= 0 && target <= 31)
+        return 1;
+    else
+        return 0;
+}
+
+int isprint(int target)
+{
+    if (!iscntrl(target))
+        return 1; // printable (non control character)
+    else
+        return 0; // non printable (control character)
+}
+
+int toupper(int target)
+{
+    if (islower(target))
+        target = target - ('A' - 'a'); // target = target + ('A' - 'a');
+    return target;
+}
+
+int tolower(int target)
+{
+    if (isupper(target))
+        target = target - ('a' - 'A');
+    return target;
 }
