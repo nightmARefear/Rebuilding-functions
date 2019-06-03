@@ -1,16 +1,17 @@
 /* tests the functions */
 #include <stdio.h>
+#include <stdlib.h> // for system command
 #include "string2.h"
 #include "ctype.h"
 
 #ifndef EXIT_SUCCESS
-EXIT_SUCCESS = 0;
+#define EXIT_SUCCESS 0
 #endif
 
 int main()
 {
-    
-    // test for string2.h library 
+
+    // test for string2.h library
     char name1[30], name2[30];
 
     printf("\n Please enter your name: ");
@@ -37,10 +38,8 @@ int main()
 
     strcat2(First_Name, Last_Name);
     printf("\n Full name: %s \n", First_Name);
-   
-   
 
-    // test for ctype.h library 
+    // test for ctype.h library
     char c, d;
     printf("\n Enter a non-capital and capital letter: \n");
     scanf("%c%c", &c, &d);
