@@ -14,14 +14,6 @@ int isalpha(unsigned const char target)
         return 0;
 }
 
-int isdigit(unsigned const char target)
-{
-    if (target >= 0 && target <= 9)
-        return 1;
-    else
-        return 0;
-}
-
 int isalnum(unsigned const char target)
 {
     if (isalpha(target) || isdigit(target))
