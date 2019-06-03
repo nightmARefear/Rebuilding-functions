@@ -29,7 +29,7 @@ int main()
         printf("\n The second name is bigger than the first! \n");
 
     strcpy2(name1, name2);
-    printf("\n name1 (name 1 = name2): %s \n", name1);
+    printf("\n name1 (name1 = name2): %s \n", name1);
 
     char First_Name[30], Last_Name[30];
 
@@ -40,14 +40,16 @@ int main()
     printf("\n Full name: %s \n", First_Name);
 
     // test for ctype.h library
+    system("cls");
+    
     char c, d;
     printf("\n Enter a non-capital and capital letter: \n");
-    scanf("%c%c", &c, &d);
+    scanf(" %c", &c);
     c = toupper(c);
-    d = tolower(d);
+    //d = tolower(d);
 
     printf("\n The entered letter in uppercase form is: %c \n", c);
-    printf("\n The entered letter in lowercase form is: %c \n", d);
+    //printf("\n The entered letter in lowercase form is: %c \n", d);
 
     system("pause"); // pauses the terminal
     return EXIT_SUCCESS;
