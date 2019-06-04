@@ -41,15 +41,15 @@ int main()
 
     // test for ctype.h library
     system("cls");
-    
+
     char c, d;
     printf("\n Enter a non-capital and capital letter: \n");
-    scanf(" %c", &c);
+    scanf(" %c %c", &c, &d);
     c = toupper(c);
-    //d = tolower(d);
+    d = tolower(d);
 
     printf("\n The entered letter in uppercase form is: %c \n", c);
-    //printf("\n The entered letter in lowercase form is: %c \n", d);
+    printf("\n The entered letter in lowercase form is: %c \n", d);
 
     system("pause"); // pauses the terminal
     return EXIT_SUCCESS;
