@@ -80,8 +80,7 @@ char *strchr2(const char *str, int c)
 		{
 			isFound = 1;
 			pos = i;
+			return pos;
 		}
 	}
-
-	return pos;
 }
