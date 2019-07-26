@@ -71,7 +71,7 @@ char *strcat2(char *target, const char *source)
 
 char *strchr2(const char *str, int c)
 {
-	int pos, i;
+	int pos, i = 0;
 	int isFound = 0; // 0 = false, 1 = true
 
 	while (isFound == 0 && i <= strlen2(str))
@@ -83,4 +83,17 @@ char *strchr2(const char *str, int c)
 			return pos;
 		}
 	}
+}
+
+char *strrchr2(const char *str, int c)
+{
+	int i = 0, pos;
+
+	while (i<= strlen2(str))
+	{
+		if (strcmp2(str[i],c ) == 0)
+			pos = i;
+		i++;
+	}
+	return pos;
 }
