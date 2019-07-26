@@ -38,7 +38,7 @@ int main()
 
     strcat2(First_Name, Last_Name);
     printf("\n Full name: %s \n", First_Name);
-
+/*
     // test for ctype.h library
     system("cls");
 
@@ -51,6 +51,6 @@ int main()
     printf("\n The entered letter in uppercase form is: %c \n", c);
     printf("\n The entered letter in lowercase form is: %c \n", d);
 
-    system("pause"); // pauses the terminal
+    system("pause"); // pauses the terminal */
     return EXIT_SUCCESS;
 }
